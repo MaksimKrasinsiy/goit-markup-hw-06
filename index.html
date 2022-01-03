@@ -372,13 +372,61 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop " data-modal>
         <div class="modal">
             <button type="button" class="modal-close" data-modal-close>
                 <svg class="modal-close-icon" width="18" heigth="18" >
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <p class="modal-title">
+                Оставьте свои данные, мы вам перезвоним
+            </p>
+            <form action="#" class="model-form">
+             <div class="modal-field">  
+                <label class="form-input-text">Имя
+                    <input 
+                        type="text" 
+                        name="user-name" 
+                        class="modal-form-input"
+                        required
+                        placeholder="Максим"
+                    >
+                </label>
+            </div>
+            <div class="modal-field">
+                <label class="form-input-text">Телефон
+                    <input 
+                        type="tel" 
+                        name="user-tel" 
+                        class="modal-form-input"
+                        placeholder="+38 (067) 111-11-11"
+                        required
+                        pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                    >
+                </label>
+            </div>
+            <div class="modal-field">
+                <label class="form-input-text">Почта
+                    <input 
+                        type="email" 
+                        name="user-email"  
+                        class="modal-form-input"
+                        placeholder="name@mail.ua"
+                    >
+                </label>
+            </div>
+            <div class="modal-field-textarea">
+                <label for="user-text" class="form-input-text">Комментарий</label>
+                <textarea 
+                    name="user-text" 
+                    id="user-text" 
+                    class="modal-form-text"
+                    placeholder="Введите текст"
+                ></textarea>
+            </div>
+             <button type="submit">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
